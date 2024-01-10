@@ -7,7 +7,7 @@ Elementy składające się na pojazd:
 - obudowa złożona z kawałka sklejki, dwóch kółek i jednego kółka skrętnego.
 - powerbank -zasilanie układu
 
-Czujniki CNY70 są połączone kolejno do wejść analogowych do pinów:
+W celu odczytania pozycji pojazdu względem linii, wyjścia z czujników CNY70 są połączone kolejno do wejść analogowych do pinów:
 | Nr Pinu | Pin na STM32 | Pin na Arduino |
 |---------|-----------|-------------|
 |   1    |   PA_3    |      A0     |
