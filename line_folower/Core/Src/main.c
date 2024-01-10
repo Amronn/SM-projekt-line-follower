@@ -209,7 +209,7 @@ void controlMotors(void)
 
 	prev_signal = signal;
 
-	sig = -signal*KP+integral*KI+derivative*KD;
+	sig = -signal*KP-integral*KI-derivative*KD;
 	sig2 = signal*KP+integral*KI+derivative*KD;
 
 	if (sig >= 0)
