@@ -8,12 +8,12 @@ Elementy składające się na pojazd:
 - powerbank -zasilanie układu
 
 Czujniki CNY70 są połączone kolejno do wejść analogowych do pinów:
-| Nr Pinu | Pin STM32 | Pin Arduino |
+| Nr Pinu | Pin na STM32 | Pin na Arduino |
 |---------|-----------|-------------|
-|   -1    |   PA_3    |      A0     |
-|   -2    |   PC_0    |      A1     |
-|   -3    |   PC_3    |      A2     |
-|   -4    |   PF_3    |      A3     |
-|   -5    |   PF_5    |      A4     |
+|   1    |   PA_3    |      A0     |
+|   2    |   PC_0    |      A1     |
+|   3    |   PC_3    |      A2     |
+|   4    |   PF_3    |      A3     |
+|   5    |   PF_5    |      A4     |
 
-Do sterowania silników został użyty sterownik L298n. Silniki są sterowane PWM z TIM1.
+Do sterowania silników został użyty sterownik L298n. Silniki są sterowane za pomocą PWM z TIM1.
