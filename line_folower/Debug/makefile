@@ -60,8 +60,8 @@ all: main-build
 main-build: line_folower.elf secondary-outputs
 
 # Tool invocations
-line_folower.elf line_folower.map: $(OBJS) $(USER_OBJS) E:\pp\SM\stm32\line_folower\STM32F756ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "line_folower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\pp\SM\stm32\line_folower\STM32F756ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="line_folower.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+line_folower.elf line_folower.map: $(OBJS) $(USER_OBJS) E:\pp\SM\stm32\SM-projekt-line-follower\line_folower\STM32F756ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "line_folower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\pp\SM\stm32\SM-projekt-line-follower\line_folower\STM32F756ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="line_folower.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

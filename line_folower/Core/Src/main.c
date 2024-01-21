@@ -212,7 +212,7 @@ void controlMotors(void)
 	sig = -signal*KP-integral*KI-derivative*KD;
 	sig2 = signal*KP+integral*KI+derivative*KD;
 
-	if (sig >= 0)
+	if (200+sig >= 0)
 	{
 		HAL_GPIO_WritePin(GPIOF, GPIO_PIN_14, GPIO_PIN_RESET);
 
@@ -231,7 +231,7 @@ void controlMotors(void)
 		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1200 + abs(sig));
 
 	}
-	if (sig2 >= 0)
+	if (200 + sig2 >= 0)
 	{
 
 		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_13, GPIO_PIN_RESET);
